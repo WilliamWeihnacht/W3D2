@@ -1,0 +1,33 @@
+W3D2 Notes
+
+References
+
+Variables hold references/pointers to objects in memory
+= only assigns an obect to a variable. Doesn't mutate the object
+
+Mutable: String, Array, Hash
+Immutable: Int, Float, Symbol
+
+<< vs concat vs +=
+[1,2] << [3] => [1,2,[3]]
+[1,2].concat([3]) => [1,2,3]
++= acts similiarly to concat but creates a new array object
+<< modifys original object
+
+block scope of local variables
+inside a do..end block you have access to all variables declared previously at the same or an outer-level scope
+cannot access variables declared in a block outside of it
+changes made in a block to a variable declared outside of it will persist
+
+Scope gates
+parts of code where a new scope is created and all local variables previously defined can't be accessed
+scope gates: method definition, class definitions, modules definitions
+
+paramater vs argument
+Parameter: variable in a method definition
+Argument: variable method is invoked with
+
+passing arguments to methods
+in the scope of a method the param is a copy of the arg that the method was invoked with
+if we reassign the param within the method the arg we called the method with is unaffected
+if we mutate the parameter object the argument is affected
